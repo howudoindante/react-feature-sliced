@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Classname appends right 1`] = `
+<button
+  className="button"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Classname appends right 2`] = `
+<button
+  className="button test"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Classname appends right 3`] = `
+<button
+  className="button"
+  type="button"
+>
+  Test
+</button>
+`;
