@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint \"./{src,config}/**/*.{ts,tsx}\"",
     "lint:fix": "eslint \"./{src,config}/**/*.{ts,tsx}\"  --fix",
-    "dev": "webpack --env port=3000 serve --open",
+    "dev": "webpack serve --open --env port=3000 ",
     "build": "webpack --env mode=production ",
     "test": "jest"
   },

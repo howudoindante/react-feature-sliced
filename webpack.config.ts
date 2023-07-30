@@ -26,7 +26,7 @@ const getConfig = (env: WebpackEnv): Configuration => {
     port: env.port ?? 3000,
     isDev: mode === "development",
   };
-
+  console.log(webpackConfiguration.isDev, mode);
   return {
     entry: webpackConfiguration.ENTRY_PATH,
     mode: webpackConfiguration.mode,

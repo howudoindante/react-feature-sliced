@@ -11,8 +11,12 @@ export const getWebpackPlugins = (
     }),
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash:7].css",
-      chunkFilename: "[name].[contenthash:7].css",
+      filename: !config.isDev
+        ? "css/[name].[contenthash:12].css"
+        : "css/[name].css",
+      chunkFilename: !config.isDev
+        ? "css/[name].[contenthash:12].css"
+        : "css/[name].css",
     }),
   ];
 };

@@ -23,7 +23,17 @@ export const getWebpackRules = (
     test: /\.s[ac]ss$/i,
     use: [
       MiniCssExtractPlugin.loader,
-      "css-loader",
+      {
+        loader: "css-loader",
+        options: {
+          modules: {
+            auto: /\.module.s[ac]ss$/i,
+            localIdentName: config.isDev
+              ? "[path][name]__[local]"
+              : "[hash:base64:8]",
+          },
+        },
+      },
       {
         loader: "sass-loader",
         options: {
